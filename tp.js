@@ -1,22 +1,22 @@
-function Ej1(nombre){
+function formatearNombre(nombre){
 
     let resultado= ""
 
 
 
 
-for(let i = 0; i < nombre.length; i++){
+    for(let i = 0; i < nombre.length; i++){
 
-    if( i==0){
-        resultado+=nombre[0].toUpperCase()
-    }else{
-        resultado+=nombre[i].toLowerCase()
-    }
-return resultado
+        if( i==0){
+            resultado+=nombre[0].toUpperCase()
+        }else{
+            resultado+=nombre[i].toLowerCase()
+        }
+    return resultado
 
 }
 }
-function Ej2(texto){
+function contarLetras(texto){
 
     let letras = 0;
     for(let i=0;i< texto.length; i++){
@@ -30,11 +30,29 @@ function Ej2(texto){
     
 }
 
+function maximo(a, b, c){
+   let maximo= 0;
 
+
+   let Numeros= [a,b,c]
+
+    for(let i=0 ; i < Numeros.length; i++){
+
+        if(Numeros[i] > maximo){
+
+            maximo=Numeros[i]
+        }
+
+        
+
+    }
+   return maximo
+}
 
 
 
  function mostrarResultado() {
-    console.log(Ej1("RAUL"))
-    console.log(Ej2("RAUL ES"))
+    console.log(formatearNombre("RAUL"))
+    console.log(contarLetras("RAUL ES"))
+    console.log(maximo(1, 2, 3))
   }
