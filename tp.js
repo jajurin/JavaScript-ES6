@@ -1,15 +1,24 @@
 function Ej1(nombre){
 
-    let resultado
-let nombreMin = nombre.toLowerCase()
-
-nombreMin= nombreMin-nombreMin[0]
-
-let nombreCom = nombre[0].toUpperCase()
+    let resultado= ""
 
 
 
-return resultado= nombreCom + nombreMin
+
+for(let i = 0; i < nombre.length; i++){
+
+    if( i==0){
+        resultado+=nombre[0].toUpperCase()
+    }else{
+        resultado+=nombre[i].toLowerCase()
+    }
+
+
+}
+
+
+
+return resultado
 }
 
  function mostrarResultado() {
