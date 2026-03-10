@@ -51,12 +51,20 @@ function maximo(a, b, c){
 
 function validarPassword(password){
 
-let passwordVer=[]
-for(let i=0;i<password.length;i++){
-    passwordVer+=password[i]
-}
+let passwordVer=password
+let tieneNum = false
+if(passwordVer.length < 8)
+    return false
 
-return passwordVer
+for(let i = 0; i < passwordVer.length ; i++){
+             
+    if(passwordVer[i] <= 9 && passwordVer[i] >= 0 )
+           
+            tieneNum= true
+    }
+  
+    return tieneNum
+
 }
 
 
@@ -65,5 +73,5 @@ return passwordVer
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
     console.log(maximo(1, 2, 3))
-    console.log(validarPassword("1yoooooooolo"))
+    console.log(validarPassword("RAULESHERO9"))
   }
