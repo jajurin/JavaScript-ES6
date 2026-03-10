@@ -67,11 +67,24 @@ for(let i = 0; i < passwordVer.length ; i++){
 
 }
 
+function sumarArray(numeros){
 
+let ArrayNum= []
+
+for(let i = 0; i < numeros.length; i++){
+
+            ArrayNum[i]=numeros[i]
+      }
+
+let total = ArrayNum.reduce((Acum, Num) => Acum + Num, 0)
+
+return total
+    }
 
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
     console.log(maximo(1, 2, 3))
     console.log(validarPassword("RAULESHERO9"))
+    console.log(sumarArray([1,2,3,4,5]))
   }
