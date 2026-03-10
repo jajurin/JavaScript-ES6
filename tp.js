@@ -49,10 +49,21 @@ function maximo(a, b, c){
    return maximo
 }
 
+function validarPassword(password){
+
+let passwordVer=[]
+for(let i=0;i<password.length;i++){
+    passwordVer+=password[i]
+}
+
+return passwordVer
+}
+
 
 
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
     console.log(maximo(1, 2, 3))
+    console.log(validarPassword("1yoooooooolo"))
   }
