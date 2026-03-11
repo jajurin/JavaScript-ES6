@@ -51,14 +51,13 @@ function maximo(a, b, c){
 
 function validarPassword(password){
 
-let passwordVer=password
 let tieneNum = false
-if(passwordVer.length < 8)
+if(password.length < 8)
     return false
 
-for(let i = 0; i < passwordVer.length ; i++){
+for(let i = 0; i < password.length ; i++){
              
-    if(passwordVer[i] <= 9 && passwordVer[i] >= 0 )
+    if(password[i] <= 9 && password[i] >= 0 )
            
             tieneNum= true
     }
@@ -69,17 +68,27 @@ for(let i = 0; i < passwordVer.length ; i++){
 
 function sumarArray(numeros){
 
-let ArrayNum= []
 
-for(let i = 0; i < numeros.length; i++){
 
-            ArrayNum[i]=numeros[i]
-      }
-
-let total = ArrayNum.reduce((Acum, Num) => Acum + Num, 0)
+let total = numeros.reduce((Acum, Num) => Acum + Num, 0)
 
 return total
     }
+
+function mayorNumero(numeros){
+
+let mayorNum= 0
+
+for(let i = 0; i < numeros.length; i++){
+         
+    if(numeros[i]>mayorNum){
+            mayorNum=numeros[i]
+      }
+   
+
+      }
+      return mayorNum
+        }
 
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
@@ -87,4 +96,5 @@ return total
     console.log(maximo(1, 2, 3))
     console.log(validarPassword("RAULESHERO9"))
     console.log(sumarArray([1,2,3,4,5]))
+        console.log(mayorNumero([1,2,3,4,5]))
   }
