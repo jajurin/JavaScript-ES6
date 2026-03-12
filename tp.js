@@ -24,6 +24,15 @@ const usuario = {
 
  activo: false
  }
+ const productos = [
+
+{nombre:"Mouse", precio:10},
+
+{nombre:"Teclado", precio:25},
+
+{nombre:"Monitor", precio:200}
+
+]
 function contarLetras(texto){
 
     let letras = 0;
@@ -121,6 +130,27 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
 
   }
 
+ function activarUsuario(usuario){
+ usuario.activo=true
+
+ return usuario.activo
+
+      }
+
+      function calcularPrecioTotalProductos(productos){
+        let total=0
+
+     for(let i = 0; i < productos.length; i++){
+
+        total+=productos[i].precio
+         
+
+
+  }
+  return total
+
+        }
+
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -130,4 +160,7 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
     console.log(mayorNumero([1,2,3,4,5]))
    console.log(obtenerPares([1,2,3,4,5]))
    console.log(descripcionUsuario(usuario))
+   console.log(activarUsuario(usuario))
+   console.log(calcularPrecioTotalProductos(productos))
+   
   }
