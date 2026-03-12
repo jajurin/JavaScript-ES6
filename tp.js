@@ -16,6 +16,14 @@ function formatearNombre(nombre){
 
 }
 }
+const usuario = {
+
+ nombre: "Ana",
+
+ edad: 20,
+
+ activo: false
+ }
 function contarLetras(texto){
 
     let letras = 0;
@@ -106,6 +114,13 @@ for(let i = 0; i < numeros.length; i++){
   }
   return pares
 }
+function descripcionUsuario(usuario){
+         
+return `${usuario.nombre} tiene ${usuario.edad} años`
+
+
+  }
+
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -114,4 +129,5 @@ for(let i = 0; i < numeros.length; i++){
     console.log(sumarArray([1,2,3,4,5]))
     console.log(mayorNumero([1,2,3,4,5]))
    console.log(obtenerPares([1,2,3,4,5]))
+   console.log(descripcionUsuario(usuario))
   }
