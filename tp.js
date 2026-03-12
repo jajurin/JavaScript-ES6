@@ -12,9 +12,44 @@ function formatearNombre(nombre){
         }else{
             resultado+=nombre[i].toLowerCase()
         }
-    return resultado
+   
 
 }
+    return resultado
+}
+const usuario = {
+
+ nombre: "Ana",
+
+ edad: 20,
+
+ activo: false
+ }
+ const productos = [
+
+{nombre:"Mouse", precio:10},
+
+{nombre:"Teclado", precio:25},
+
+{nombre:"Monitor", precio:200}
+
+]
+
+const usuarios = [
+
+{nombre:"Ana", edad:17},
+
+{nombre:"Juan", edad:25},
+
+{nombre:"Pedro", edad:30}
+
+]
+const producto = {
+
+nombre:"Notebook",
+
+precio:1000
+
 }
 function contarLetras(texto){
 
@@ -90,11 +125,127 @@ for(let i = 0; i < numeros.length; i++){
       return mayorNum
         }
 
+        function obtenerPares(numeros){
+
+        let pares= []
+        let j = 0
+  for(let i = 0; i < numeros.length; i++){
+         
+    if(numeros[i] % 2 == 0){
+   pares[j]=numeros[i]
+        j++
+      }
+      
+
+
+  }
+  return pares
+}
+function descripcionUsuario(usuario){
+         
+return `${usuario.nombre} tiene ${usuario.edad} años`
+
+
+  }
+
+ function activarUsuario(usuario){
+ usuario.activo=true
+
+ return usuario.activo
+
+      }
+
+      function calcularPrecioTotalProductos(productos){
+        let total=0
+
+     for(let i = 0; i < productos.length; i++){
+
+        total+=productos[i].precio
+         
+
+
+  }
+  return total
+
+        }
+
+        function usuariosSoloNombre(usuarios){
+
+            let nombreUs = []
+    for(let i = 0; i < usuarios.length; i++){
+
+          
+        nombreUs[i]=usuarios[i].nombre
+         
+
+
+  }
+  return nombreUs
+
+            }
+
+  function usandoFilter(usuarios){
+       
+     let mayores = usuarios.filter(usuario => usuario.edad >= 18)
+     
+     
+                    return mayores
+                }
+
+    function usandoReduce(usuarios){
+
+          let total = usuarios.reduce((Acum,usuarios)=>Acum+usuarios.edad,0 )
+             return total
+         }
+
+         function usandoDestructing({nombre, precio}){
+
+            return `${nombre} vale ${precio} `
+
+
+
+            }
+
+          const productoStockSpreadOperator = {
+
+           ...producto,
+              stock: 5
+          }
+
+          function usandoSpreadOperator(producto, productoStockSpreadOperator){
+
+            return [producto, productoStockSpreadOperator]
+
+            
+          }
+
+         function buscarProducto(productos, nombre){
+            let productoCor = productos.find( productos => productos.nombre == nombre)
+
+            
+       return productoCor
+            
+         }
+
+
+            
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
     console.log(maximo(1, 2, 3))
     console.log(validarPassword("RAULESHERO9"))
     console.log(sumarArray([1,2,3,4,5]))
-        console.log(mayorNumero([1,2,3,4,5]))
+    console.log(mayorNumero([1,2,3,4,5]))
+   console.log(obtenerPares([1,2,3,4,5]))
+   console.log(descripcionUsuario(usuario))
+   console.log(activarUsuario(usuario))
+   console.log(calcularPrecioTotalProductos(productos))
+    console.log( usuariosSoloNombre(usuarios))
+    console.log(usandoFilter(usuarios))
+     console.log(usandoReduce(usuarios))
+     console.log(usandoDestructing(producto))
+     console.log(usandoSpreadOperator(producto, productoStockSpreadOperator))
+      console.log(buscarProducto(productos, "Teclado"))
+          
+   
   }
