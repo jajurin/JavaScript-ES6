@@ -184,6 +184,13 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
      
                     return mayores
                 }
+
+    function usandoReduce(usuarios){
+
+          let total = usuarios.reduce((Acum,usuarios)=>Acum+usuarios.edad,0 )
+             return total
+         }
+
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -197,5 +204,6 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
    console.log(calcularPrecioTotalProductos(productos))
     console.log( usuariosSoloNombre(usuarios))
     console.log(usandoFilter(usuarios))
+     console.log(usandoReduce(usuarios))
    
   }
