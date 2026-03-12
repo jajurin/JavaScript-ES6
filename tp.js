@@ -44,6 +44,13 @@ const usuarios = [
 {nombre:"Pedro", edad:30}
 
 ]
+const producto = {
+
+nombre:"Notebook",
+
+precio:1000
+
+}
 function contarLetras(texto){
 
     let letras = 0;
@@ -191,6 +198,13 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
              return total
          }
 
+         function usandoDestructing({nombre, precio}){
+
+            return `${nombre} vale ${precio} `
+
+
+
+            }
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -205,5 +219,6 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
     console.log( usuariosSoloNombre(usuarios))
     console.log(usandoFilter(usuarios))
      console.log(usandoReduce(usuarios))
+     console.log(usandoDestructing(producto))
    
   }
