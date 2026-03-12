@@ -12,9 +12,10 @@ function formatearNombre(nombre){
         }else{
             resultado+=nombre[i].toLowerCase()
         }
-    return resultado
+   
 
 }
+    return resultado
 }
 const usuario = {
 
@@ -163,7 +164,7 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
 
         function usuariosSoloNombre(usuarios){
 
-            nombreUs = []
+            let nombreUs = []
     for(let i = 0; i < usuarios.length; i++){
 
           
@@ -175,6 +176,14 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
   return nombreUs
 
             }
+
+  function usandoFilter(usuarios){
+       
+     let mayores = usuarios.filter(usuario => usuario.edad >= 18)
+     
+     
+                    return mayores
+                }
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -187,5 +196,6 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
    console.log(activarUsuario(usuario))
    console.log(calcularPrecioTotalProductos(productos))
     console.log( usuariosSoloNombre(usuarios))
+    console.log(usandoFilter(usuarios))
    
   }
