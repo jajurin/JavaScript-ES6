@@ -33,6 +33,16 @@ const usuario = {
 {nombre:"Monitor", precio:200}
 
 ]
+
+const usuarios = [
+
+{nombre:"Ana", edad:17},
+
+{nombre:"Juan", edad:25},
+
+{nombre:"Pedro", edad:30}
+
+]
 function contarLetras(texto){
 
     let letras = 0;
@@ -151,6 +161,20 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
 
         }
 
+        function usuariosSoloNombre(usuarios){
+
+            nombreUs = []
+    for(let i = 0; i < usuarios.length; i++){
+
+          
+        nombreUs[i]=usuarios[i].nombre
+         
+
+
+  }
+  return nombreUs
+
+            }
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -162,5 +186,6 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
    console.log(descripcionUsuario(usuario))
    console.log(activarUsuario(usuario))
    console.log(calcularPrecioTotalProductos(productos))
+    console.log( usuariosSoloNombre(usuarios))
    
   }
