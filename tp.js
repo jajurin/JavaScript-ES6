@@ -227,6 +227,44 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
             
          }
 
+         function productosCarosDevolver(productos){
+            let productosCaros = productos.filter(productos => productos.precio >= 50)
+
+            return productosCaros
+            
+
+         }
+
+         function promedio(numeros) {
+            let promedio = numeros.reduce((acum,num) => acum + num / numeros.length,0)
+
+      
+       return promedio
+         }
+         const usuariosFin = [
+
+{id:1, nombre:"Ana", edad:20},
+
+{id:2, nombre:"Juan", edad:15},
+
+{id:3, nombre:"Pedro", edad:30}
+
+]
+
+function obtenerUsuarios(usuariosFin) {
+    return usuariosFin
+
+}
+function obtenerUsuarioPorId(usuariosFin, id) {
+let usuarioId = usuariosFin.filter(usuariosFin => usuariosFin.id == id )
+return usuarioId
+
+}
+function obtenerMayores(usuariosFin, edad) {
+    let usuarioEdad = usuariosFin.filter(usuario => usuario.edad >= edad)
+    return usuarioEdad
+}
+
 
             
  function mostrarResultado() {
@@ -246,6 +284,12 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
      console.log(usandoDestructing(producto))
      console.log(usandoSpreadOperator(producto, productoStockSpreadOperator))
       console.log(buscarProducto(productos, "Teclado"))
+     console.log(productosCarosDevolver(productos))
+     console.log(promedio([1,2,3,4,5]))
+     console.log(obtenerUsuarios(usuariosFin))
+     console.log(obtenerUsuarioPorId(usuariosFin,1))
+     console.log(obtenerMayores(usuariosFin,18))
+
           
    
   }
