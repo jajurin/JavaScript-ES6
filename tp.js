@@ -205,6 +205,30 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
 
 
             }
+
+          const productoStockSpreadOperator = {
+
+           ...producto,
+              stock: 5
+          }
+
+          function usandoSpreadOperator(producto, productoStockSpreadOperator){
+
+            return [producto, productoStockSpreadOperator]
+
+            
+          }
+
+         function buscarProducto(productos, nombre){
+            let productoCor = productos.find( productos => productos.nombre == nombre)
+
+            
+       return productoCor
+            
+         }
+
+
+            
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
     console.log(contarLetras("RAUL ES"))
@@ -220,5 +244,8 @@ return `${usuario.nombre} tiene ${usuario.edad} años`
     console.log(usandoFilter(usuarios))
      console.log(usandoReduce(usuarios))
      console.log(usandoDestructing(producto))
+     console.log(usandoSpreadOperator(producto, productoStockSpreadOperator))
+      console.log(buscarProducto(productos, "Teclado"))
+          
    
   }
