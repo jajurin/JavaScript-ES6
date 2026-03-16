@@ -265,7 +265,10 @@ function obtenerMayores(usuariosFin, edad) {
     return usuarioEdad
 }
 
-
+function crearUsuario(nombre, edad){
+    usuariosFin.push({nombre, edad})
+    return usuariosFin
+}
             
  function mostrarResultado() {
     console.log(formatearNombre("RAUL"))
@@ -289,6 +292,7 @@ function obtenerMayores(usuariosFin, edad) {
      console.log(obtenerUsuarios(usuariosFin))
      console.log(obtenerUsuarioPorId(usuariosFin,1))
      console.log(obtenerMayores(usuariosFin,18))
+     console.log(crearUsuario("Damian",13))
 
           
    
