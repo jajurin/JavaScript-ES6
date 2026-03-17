@@ -1,0 +1,19 @@
+*{
+    background-color: aqua;
+}
+button{
+    margin-left: 45%;
+    size: 125%;
+    color: blue;
+    padding: 20px;
+    background-color: yellow;
+}
+
+button:hover{
+
+    size: 150%;
+    color: rgb(15, 15, 163);
+    background-color: rgb(180, 180, 9);
+    padding: 22px;
+
+}
